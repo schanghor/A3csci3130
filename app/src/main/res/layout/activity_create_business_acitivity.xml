@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.acme.a3csci3130.CreateBusinessAcitivity">
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Business Number"
+        android:inputType="phone"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLength="9"/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="129dp"
+        android:hint="Business Address"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLength="50"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="43dp"
+        android:hint="Name"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLength="48"/>
+
+    <Spinner
+        android:id="@+id/province"
+        android:layout_width="377dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="129dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number"
+        android:entries="@array/province"
+        android:prompt="@string/provincePrompt" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="submitInfoButton"
+        android:text="Create Business"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/province" />
+
+    <Spinner
+        android:id="@+id/primaryBusiness"
+        android:layout_width="377dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="-376dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="85dp"
+        android:entries="@array/primaryBusiness"
+        android:prompt="@string/primaryBusinessPrompt"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
